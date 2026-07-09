@@ -225,6 +225,7 @@ Copy-Item -Recurse rules/typescript "$HOME/.claude/rules/"
 ```
 
 **搞定！** 你现在可以使用 63 个智能体、251 项技能和 79 个命令了。
+**搞定！** 你现在可以使用 54 个智能体、204 项技能和 69 个命令了。
 
 ***
 
@@ -1139,6 +1140,11 @@ opencode
 | 智能体 | PASS: 63 个    | PASS: 12 个 | **Claude Code 领先** |
 | 命令 | PASS: 79 个    | PASS: 35 个 | **Claude Code 领先** |
 | 技能 | PASS: 251 项   | PASS: 37 项 | **Claude Code 领先** |
+| 功能特性 | Claude Code | OpenCode | 状态 |
+|---------|-------------|----------|--------|
+| 智能体 | PASS: 54 个 | PASS: 12 个 | **Claude Code 领先** |
+| 命令 | PASS: 69 个 | PASS: 31 个 | **Claude Code 领先** |
+| 技能 | PASS: 204 项 | PASS: 37 项 | **Claude Code 领先** |
 | 钩子 | PASS: 8 种事件类型 | PASS: 11 种事件 | **OpenCode 更多！** |
 | 规则 | PASS: 29 条    | PASS: 13 条指令 | **Claude Code 领先** |
 | MCP 服务器 | PASS: 14 个    | PASS: 完整 | **完全对等** |
@@ -1253,6 +1259,17 @@ ECC 是**第一个最大化利用每个主要 AI 编码工具的插件**。以�
 | **自定义工具** | 通过钩子                  | 通过钩子 | N/A | 6 个原生工具 |
 | **MCP 服务器** | 14                    | 共享 (mcp.json) | 4 (基于命令) | 完整 |
 | **配置格式** | settings.json         | hooks.json + rules/ | config.toml | opencode.json |
+| 功能特性 | Claude Code | Cursor IDE | Codex CLI | OpenCode |
+|---------|------------|------------|-----------|----------|
+| **智能体** | 54 | 共享 (AGENTS.md) | 共享 (AGENTS.md) | 12 |
+| **命令** | 69 | 共享 | 基于指令 | 31 |
+| **技能** | 204 | 共享 | 10 (原生格式) | 37 |
+| **钩子事件** | 8 种类型 | 15 种类型 | 暂无 | 11 种类型 |
+| **钩子脚本** | 20+ 个脚本 | 16 个脚本 (DRY 适配器) | N/A | 插件钩子 |
+| **规则** | 34 (通用 + 语言) | 34 (YAML 前页) | 基于指令 | 13 条指令 |
+| **自定义工具** | 通过钩子 | 通过钩子 | N/A | 6 个原生工具 |
+| **MCP 服务器** | 14 | 共享 (mcp.json) | 4 (基于命令) | 完整 |
+| **配置格式** | settings.json | hooks.json + rules/ | config.toml | opencode.json |
 | **上下文文件** | CLAUDE.md + AGENTS.md | AGENTS.md | AGENTS.md | AGENTS.md |
 | **秘密检测** | 基于钩子                  | beforeSubmitPrompt 钩子 | 基于沙箱 | 基于钩子 |
 | **自动格式化** | PostToolUse 钩子        | afterFileEdit 钩子 | N/A | file.edited 钩子 |

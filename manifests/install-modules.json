@@ -713,6 +713,7 @@
         "joycode",
         "qwen",
         "zed"
+        "codebuddy"
       ],
       "dependencies": [
         "framework-language",

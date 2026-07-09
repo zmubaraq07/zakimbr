@@ -161,6 +161,7 @@ Copy-Item -Recurse rules/typescript "$HOME/.claude/rules/"
 ```
 
 **完成！** 你现在可以使用 63 个代理、251 个技能和 79 个命令。
+**完成！** 你现在可以使用 54 个代理、204 个技能和 69 个命令。
 
 ### multi-* 命令需要额外配置
 
