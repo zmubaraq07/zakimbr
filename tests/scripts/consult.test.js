@@ -103,6 +103,9 @@ function runTests() {
     assert.ok(capabilityIndex < reviewerIndex,
       'The workflow capability should rank ahead of the reviewer agent for broad MLE setup queries');
     assert.ok(findMatch(payload, 'capability:machine-learning').installCommand.includes('--with capability:machine-learning'));
+    assert.strictEqual(payload.matches[0].componentId, 'capability:machine-learning');
+    assert.ok(payload.matches[0].installCommand.includes('--with capability:machine-learning'));
+    assert.ok(payload.matches.some(match => match.componentId === 'agent:mle-reviewer'));
     assert.ok(!payload.profiles.some(profile => profile.id === 'mle'));
   })) passed++; else failed++;
 
@@ -146,6 +149,10 @@ function runTests() {
     assert.ok(!findMatch(payload, 'capability:machine-learning'));
     assert.ok(!findMatch(payload, 'agent:mle-reviewer'));
     assert.ok(!payload.profiles.some(profile => profile.id === 'mle'));
+    const reviewer = payload.matches.find(match => match.componentId === 'agent:mle-reviewer');
+    assert.ok(reviewer, 'Should include agent:mle-reviewer');
+    assert.ok(reviewer.reasons.includes('matched "model"'));
+    assert.ok(!reviewer.reasons.includes('matched "review"'));
   })) passed++; else failed++;
 
   if (test('works from outside the ECC repository', () => {
