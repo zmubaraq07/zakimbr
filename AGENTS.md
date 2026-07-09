@@ -1,5 +1,6 @@
 # Everything Claude Code (ECC) — Agent Instructions
 
+This is a **production-ready AI coding plugin** providing 60 specialized agents, 228 skills, 75 commands, and automated hook workflows for software development.
 This is a **production-ready AI coding plugin** providing 54 specialized agents, 204 skills, 69 commands, and automated hook workflows for software development.
 
 **Version:** 2.0.0-rc.1
@@ -27,6 +28,7 @@ This is a **production-ready AI coding plugin** providing 54 specialized agents,
 | doc-updater | Documentation and codemaps | Updating docs |
 | cpp-reviewer | C/C++ code review | C and C++ projects |
 | cpp-build-resolver | C/C++ build errors | C and C++ build failures |
+| fsharp-reviewer | F# functional code review | F# projects |
 | docs-lookup | Documentation lookup via Context7 | API/docs questions |
 | go-reviewer | Go code review | Go projects |
 | go-build-resolver | Go build errors | Go build failures |
@@ -34,6 +36,8 @@ This is a **production-ready AI coding plugin** providing 54 specialized agents,
 | kotlin-build-resolver | Kotlin/Gradle build errors | Kotlin build failures |
 | database-reviewer | PostgreSQL/Supabase specialist | Schema design, query optimization |
 | python-reviewer | Python code review | Python projects |
+| django-reviewer | Django code review | Django apps, DRF APIs, ORM, migrations |
+| django-build-resolver | Django build, migration, and setup errors | Django startup, dependency, migration, collectstatic failures |
 | java-reviewer | Java and Spring Boot code review | Java/Spring Boot projects |
 | java-build-resolver | Java/Maven/Gradle build errors | Java build failures |
 | loop-operator | Autonomous loop execution | Run loops safely, monitor stalls, intervene |
@@ -146,6 +150,9 @@ Troubleshoot failures: check test isolation → verify mocks → fix implementat
 ## Project Structure
 
 ```
+agents/          — 60 specialized subagents
+skills/          — 228 workflow skills and domain knowledge
+commands/        — 75 slash commands
 agents/          — 54 specialized subagents
 skills/          — 204 workflow skills and domain knowledge
 commands/        — 69 slash commands
