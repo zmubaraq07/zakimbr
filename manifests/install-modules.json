@@ -605,6 +605,7 @@
         "codebuddy",
         "joycode",
         "qwen"
+        "codebuddy"
       ],
       "dependencies": [
         "framework-language",
